@@ -1,4 +1,4 @@
-module github.com/martin-helmich/kubernetes-operator-example
+module github.com/angudadevops/service-deployment-operator
 
 go 1.13
 
