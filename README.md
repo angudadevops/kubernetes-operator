@@ -1,6 +1,6 @@
 # Service Deployment Operator
 
-This Operator help you to deploy Application Deployment and Service on Kubernetes/Openshift Cluster. And this Operator built using [Operator Framework](https://github.com/operator-framework)
+This Operator help you to deploy Application Deployment and Service on Kubernetes/Openshift Cluster.
 
 ## Prerequisites
   - [Operator Framework](https://github.com/operator-framework)
@@ -39,5 +39,23 @@ kubectl apply -f deploy/operator.yaml
 
 ## Create a Custom Resource
 
+Once Operator is up and running, use the below snippet and update your parameters to deploy your code on your cluster.
 
+```
+apiVersion: servicedeployment.com/v1alpha1
+kind: SD
+metadata:
+  name: nginx-sd
+spec:
+  # Add fields here
+  replicas: 3
+  image: nginx
+  containerPort: 80
+  nodePort: 31001
+```
+
+You can apply the below yaml for your testing 
+```
+kubectl apply -f deploy/crds/servicedeployment.com_v1alpha1_sd_cr.yaml
+```
 
