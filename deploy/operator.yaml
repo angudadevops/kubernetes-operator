@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: service-deployment
+  template:
+    metadata:
+      labels:
+        name: service-deployment
+    spec:
+      serviceAccountName: service-deployment
+      containers:
+        - name: service-deployment
+          # Replace this with the built image name
+          image: anguda/service-deployment
+          command:
+          - service-deployment
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "service-deployment"

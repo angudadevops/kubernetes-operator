@@ -1,0 +1,10 @@
+apiVersion: servicedeployment.com/v1alpha1
+kind: SD
+metadata:
+  name: nginx-sd
+spec:
+  # Add fields here
+  replicas: 3
+  image: nginx
+  containerPort: 80
+  nodePort: 31001
