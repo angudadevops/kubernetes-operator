@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"github.com/martin-helmich/kubernetes-operator-example/pkg/controller/sd"
+	"github.com/angudadevops/service-deployment-operator/pkg/controller/sd"
 )
 
 func init() {

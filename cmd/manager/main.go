@@ -12,9 +12,9 @@ import (
 	_ "k8s.io/client-go/plugin/pkg/client/auth"
 	"k8s.io/client-go/rest"
 
-	"github.com/martin-helmich/kubernetes-operator-example/pkg/apis"
-	"github.com/martin-helmich/kubernetes-operator-example/pkg/controller"
-	"github.com/martin-helmich/kubernetes-operator-example/version"
+	"github.com/angudadevops/service-deployment-operator/pkg/apis"
+	"github.com/angudadevops/service-deployment-operator/pkg/controller"
+	"github.com/angudadevops/service-deployment-operator/version"
 
 	"github.com/operator-framework/operator-sdk/pkg/k8sutil"
 	kubemetrics "github.com/operator-framework/operator-sdk/pkg/kube-metrics"

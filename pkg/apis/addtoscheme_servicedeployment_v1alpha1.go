@@ -1,7 +1,7 @@
 package apis
 
 import (
-	"github.com/martin-helmich/kubernetes-operator-example/pkg/apis/servicedeployment/v1alpha1"
+	"github.com/angudadevops/service-deployment-operator/pkg/apis/servicedeployment/v1alpha1"
 )
 
 func init() {
